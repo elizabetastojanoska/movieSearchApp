@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px; 
+    background-color: black; 
+    color: white; 
+}
+#movie-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 15px;
+}
+#favorite-movies-list { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 15px; 
+}
+#favorite-movies-list div { 
+    height: 500px;
+    width: 200px;
+}
+.movie-item {
+    margin-bottom: 15px;
+    width: 200px; 
+    cursor: pointer;
+}
+img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+}
+button {
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+.favorite {
+    background-color: #ff6347;
+    color: white;
+}
+#favorite-movies-list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+}
+.headerSearch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+.movieTitle {
+    font-size: 25px;
+}
+#search {
+    background-color: white;
+    width: 400px;
+    border-radius: 10%
+}
+img { 
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px;
+}
+#loading {
+    display: none; /* Hide it by default */
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Pagination styles */
+#pagination {
+    display: flex;
+    justify-content: center;
+    column-gap: 35px;
+}
+.pagination { 
+    margin-top: 20px; 
+    text-align: center;
+    
+}
+.pagination button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    background-color: #f39c12;
+    color: black;
+    width: 100px;
+    height: 40px;
+    border-radius: 10%;
+}
+.pagination button:hover {
+    background-color: #ddd;
+}
+.pagination .disabled {
+    cursor: not-allowed;
+    background-color: #e0e0e0;
+}
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+    padding-top: 60px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    color: black;
+    font-family: system-ui;
+}
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Card styles */
+.card {
+    background-color: #847b6380;
+    height: 500px;
+    
+}
+.card:hover {
+    animation: fadeIn 2s ease;
+}
+.disabled {
+    cursor: not-allowed;
+}
+.favorite-button {
+    background-color: #f39c12;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.favorite-button:hover {
+    background-color: #e67e22;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search App</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS and Popper.js (for Bootstrap components like modals, tooltips, etc.) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="movieTitle text-warning col-sm-12 text-center">
+        <h1>Movie Search App</h1>
+    </div>
+
+
+    <div class="headerSearch col-sm-12">
+        <input type="text" id="search" class="form-control-sm" placeholder="Search for a movie..." />
+        <button id="search-btn" class="btn btn-warning">Search</button>
+
+    </div>
+
+    <div class="headerSearch col-sm-12"><label for="sort-dropdown" class="text-warning font-weight-bold">Sort
+            by:</label>
+        <select id="sort-dropdown" class="form-select btn btn-warning" aria-label=".form-select-sm example">
+            <option selected value="title">Title</option>
+            <option value="release_date">Release Year</option>
+        </select>
+    </div>
+
+    <!-- Favorites List -->
+    <h2 class="text-warning">Favorites</h2>
+    <div id="favorite-movies-list"></div>
+
+    <!-- Search Results -->
+    <h2 class="text-warning">Search Results</h2>
+
+    <!-- Loading spinner -->
+    <div id="loading" class="spinner-border text-warning"></div>
+
+    <!-- Search Results -->
+    <ul id="movie-list"></ul>
+
+    <!-- Pagination Controls -->
+    <div id="pagination" class="pagination"></div>
+
+    <!-- Modal -->
+    <div id="movie-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2 id="movie-title"></h2>
+            <img id="movie-poster" src="" alt="" style="width: 100%;">
+            <p><strong>Description:</strong> <span id="movie-description"></span></p>
+            <p><strong>Rating:</strong> <span id="movie-rating"></span></p>
+            <p><strong>Genres:</strong> <span id="movie-genres"></span></p>
+            <p><strong>Runtime:</strong> <span id="movie-runtime"></span> minutes</p>
+        </div>
+    </div>
+
+</body>
+<script src="app.js"></script>
+<script src="favorites.js"></script>
+
+</html>
